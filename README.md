@@ -1,8 +1,6 @@
 # StatPadder
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/stat_padder`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Welcome to Stat-Padder! This is your one-stop shop for all things NBA basketball! The 2018-2019 NBA season was a special one, with a number of player ascending, dominating, and evolving the game. This gem is meant to commemorate and document the players that made such a special season happen!
 
 ## Installation
 
