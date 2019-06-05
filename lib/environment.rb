@@ -1,7 +1,5 @@
-require "stat_padder/version"
-require_relative "./scraper.rb"
-require_relative "./player.rb"
-require_relative "./category.rb"
+require_relative "./stat_padder/version"
+
 require 'nokogiri'
 
 module StatPadder
@@ -10,3 +8,5 @@ module StatPadder
 
   # this is an example note to see if committing is working
 end
+
+require_relative "./command_line_interface"
