@@ -1,3 +1,6 @@
+#shebang, lets the ruby interpreter what environment you want to run. telling it what it's going to be running.
+"we want to use the ruby interpreter in order to run this file"
+
 Basic for pushing to Github - push OFTEN.
 1. git pull
 2. git push
@@ -25,7 +28,7 @@ Separation of Concerns
 Basic Interface:
 
 ---- "Welcome to Stat-Padder! Enter "Start" to begin" ---- 
-   * user enters "start" or "START" (need to account of capitalized letters in string)
+   * user enters "start" or "START" (need to account for capitalized letters in string)
 
 ---- "To view the leaders + 2019 totals, enter a number or category name." ----
    * user enter the number of the category (need to account of capitalized letters in string)
