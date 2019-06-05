@@ -1,3 +1,7 @@
+Basic for pushing to Github - push OFTEN.
+1. git pull
+2. git push
+
 1. Plan gem, imagine interface 
 2. Google some premade gems for project structure
 3. Start with entry point - the file run

@@ -22,7 +22,9 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Welcome to Stat-Padder Gem! This is your one-stop shop for all things NBA basketball! The 2018-2019 NBA season was a special one, with a number of player ascending, dominating, and evolving the game. This gem is meant to commemorate and document the players that made such a special season happen!
+
+
 
 ## Development
 
@@ -32,7 +34,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/<github username>/stat_padder. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/Ricky199X/stat_padder. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 ## License
 
@@ -40,7 +42,7 @@ The gem is available as open source under the terms of the [MIT License](https:/
 
 ## Code of Conduct
 
-Everyone interacting in the StatPadder project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/<github username>/stat_padder/blob/master/CODE_OF_CONDUCT.md).
+Everyone interacting in the StatPadder project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/Ricky199X/stat_padder/blob/master/CODE_OF_CONDUCT.md).
 # stat_padder
 
 testing out committing to Github repo
