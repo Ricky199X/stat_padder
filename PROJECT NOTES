@@ -22,3 +22,17 @@ Separation of Concerns
 - Second Level: The individual player page + summary of stat totals 
 
 
+Basic Interface:
+
+---- "Welcome to Stat-Padder! Enter "Start" to begin" ---- 
+   * user enters "start" or "START" (need to account of capitalized letters in string)
+
+---- "To view the leaders + 2019 totals, enter a number or category name." ----
+   * user enter the number of the category (need to account of capitalized letters in string)
+
+   * user will be presented the top 5 leaders of that stat category + basic total in that category *
+
+---- "To learn more about a player, enter a number or the player's name. If you would like to go back to main menu, enter "Menu" ---- 
+
+   * user is presented with player's basic bio + facts about player *
+
