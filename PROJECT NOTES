@@ -1,0 +1,20 @@
+1. Plan gem, imagine interface 
+2. Google some premade gems for project structure
+3. Start with entry point - the file run
+4. Force that to build the interface
+5. Stub out the interface
+6. Start coding things
+7. Discover Objects
+8. Program
+
+Separation of Concerns
+1. Scraper Class - Scrapes the raw data from Real GM
+2. Player Class - Creates Instances of each player (accounts for if players appear in multiple categories)
+3. Bio Class - Provides the biological player information
+3. Stat Generator Class - (Each player's stat totals for the year)
+
+2 Levels Deep
+- First Level: List of statistical categories
+- Second Level: The individual player page + summary of stat totals 
+
+
