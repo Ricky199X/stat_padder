@@ -1,8 +1,9 @@
 class CLI
    def run
       self.greeting
-      self.categories
-
+      Scraper.scrape_category_names
+      Scraper.scrape_top5
+      Scraper.scrape_category_totals
    end
 
    def greeting
@@ -10,6 +11,8 @@ class CLI
    end
 
    def categories
-      # puts out a list of major statistical categories
+      # puts out a list of major statistical categories in the 2019 NBA season 
    end
+
+   
 end
