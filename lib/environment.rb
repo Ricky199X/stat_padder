@@ -2,6 +2,7 @@ require_relative "./stat_padder/version"
 
 require 'nokogiri'
 require 'open-uri'
+require 'pry'
 
 module StatPadder
   class Error < StandardError; end
