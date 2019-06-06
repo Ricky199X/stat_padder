@@ -5,7 +5,7 @@ gemspec
 
 gem 'stat_padder'
 gem 'pry'
-gem 'nokogiri', '1.6'
+gem "nokogiri", ">= 1.8.5"
 gem 'open-uri'
 gem 'rspec'
 
