@@ -1,9 +1,9 @@
 class CLI
    def run
       self.greeting
-      Scraper.scrape_category_names
-      Scraper.scrape_top5
-      Scraper.scrape_category_totals
+      HomepageScraper.scrape_category_names
+      # Scraper.scrape_top5
+      # Scraper.scrape_category_totals
    end
 
    def greeting

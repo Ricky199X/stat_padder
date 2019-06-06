@@ -1,6 +1,7 @@
 require_relative "./stat_padder/version"
 
 require 'nokogiri'
+require 'open-uri'
 
 module StatPadder
   class Error < StandardError; end
@@ -10,3 +11,4 @@ module StatPadder
 end
 
 require_relative "./command_line_interface"
+require_relative "./homepage_scraper"
