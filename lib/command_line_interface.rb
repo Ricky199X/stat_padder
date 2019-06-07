@@ -30,6 +30,8 @@ class CLI
             5. Steals
             6. Minutes
          DOC
+
+         puts "\nWelcome, stat-nerd. Please select a category you would like to view.\n"
       end
    end
 
