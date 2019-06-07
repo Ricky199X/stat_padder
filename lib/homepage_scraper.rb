@@ -9,6 +9,8 @@ class HomepageScraper
       parsed_players = Nokogiri::HTML(page)
 
       category_names = parsed_players.css("div.category-name").map(&:text)
+      # binding.pry
+
       category_totals = parsed_players.css("span.stat").map(&:text)
 
       category_player_names = parsed_players.css("span.player-name").collect do |link|
@@ -30,7 +32,7 @@ class HomepageScraper
       #       # total: category.css("span.stat").text
       #    })
       # end
-      binding.pry
+      # binding.pry
       # categories_array
    end
 
