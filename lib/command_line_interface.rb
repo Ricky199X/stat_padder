@@ -41,10 +41,10 @@ class CLI
 
    # accepts user input here to determine which category's players they'd like to see
 
-  def display_players_and_totals
-      # Player.all.sort
-     # code here -> ultimately returns the names of the players in that category + their total in that category
-  end
+#   def display_players_and_totals
+#       # Player.all.sort
+#      # code here -> ultimately returns the names of the players in that category + their total in that category
+#   end
 
    
 

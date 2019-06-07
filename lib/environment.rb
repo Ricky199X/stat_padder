@@ -11,6 +11,9 @@ module StatPadder
   # this is an example note to see if committing is working
 end
 
+module Concerns
+end
+
 require_relative "./command_line_interface"
 require_relative "./homepage_scraper"
 require_relative "./rebounds"
