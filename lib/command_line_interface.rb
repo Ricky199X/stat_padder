@@ -2,22 +2,16 @@ require_relative '../lib/homepage_scraper.rb'
 
 class CLI
    def run
-      self.greeting
-      HomepageScraper.scrape_homepage
       self.start
+      HomepageScraper.scrape_homepage
       # self.display_categories
    end
 
-   def greeting
-      puts "Hello, basketball head! Welcome to Stat-Padder!  For a list of categories, enter 'start'"
-   end
-
-   # user enters start
 
    def start
       input = nil
       while input != "exit" and input != "start" do
-         print "Please enter start to continue\n"
+         puts "Hello, basketball head! Welcome to Stat-Padder! For a list of categories, enter 'start'\n"
          input = gets.strip.downcase
        end
        
@@ -31,11 +25,11 @@ class CLI
             6. Minutes
          DOC
 
-         puts "\nWelcome, stat-nerd. Please select a category you would like to view.\n"
+         puts "\nPlease select a category you would like to view.\n"
       end
    end
 
-   # "start"
+
            
 
    # def display_categories
