@@ -15,7 +15,5 @@ class CLI
       # puts out a list of major statistical categories in the 2019 NBA season 
    end
 
-   def 
-
    
 end
