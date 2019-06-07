@@ -1,19 +1,20 @@
 class HomepageScraper
 
    BASE_URL = "https://basketball.realgm.com/nba/stats"
+   PLAYER_URL = ""
 
-   def self.scrape_category_names
+   def self.scrape_homepage
       page = open(BASE_URL) # page is now returning content 
-      parsed_HTML = Nokogiri::HTML(page)
-      category_names = parsed_HTML.css("div.category-name").text.split(/(?=[A-Z])/)
-      return category_names
+      parsed_players = Nokogiri::HTML(page)
+
+      category_names = parsed_HTML.css("div.category-name").map(&:text)
+      category_player_links = parsed_HTML.css("a").attribute("href").value
+      category_totals = parsed_HTML.css("span.stat").map(&:text)
+
+      
+      binding.pry
    end
 
-   def self.scrape_player_names
 
-   end
-
-   # def self.scrape_player_totals
-   # end
 
 end
