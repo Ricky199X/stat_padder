@@ -1,0 +1,2 @@
+class Minutes
+end

@@ -19,7 +19,7 @@ class HomepageScraper
          link.css("a").attribute('href').value
       end
 
-      the only logical way to pull this off is to create an array of hashes using the data above
+      # the only logical way to pull this off is to create an array of hashes using the data above
 
       # all exist in div.category-container
 
@@ -30,10 +30,22 @@ class HomepageScraper
       #       # total: category.css("span.stat").text
       #    })
       # end
-      # binding.pry
+      binding.pry
       # categories_array
    end
 
 
 
 end
+
+# will need 6 stats objects
+
+# Stats class - needs a player array
+# can have a name + have a number
+
+# @@all in stats 
+
+# Stats <-> Player  
+# # will need find or create by methods 
+
+# As they choose a person, they'll need an array of stats for that player

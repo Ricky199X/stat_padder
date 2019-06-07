@@ -13,3 +13,8 @@ end
 
 require_relative "./command_line_interface"
 require_relative "./homepage_scraper"
+require_relative "./rebounds"
+require_relative "./points"
+require_relative "./assists"
+require_relative "./blocks"
+require_relative "./steals"

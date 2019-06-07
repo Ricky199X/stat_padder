@@ -1,0 +1,3 @@
+class Steals
+   
+end
