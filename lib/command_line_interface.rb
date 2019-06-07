@@ -4,7 +4,7 @@ class CLI
    def run
       self.start
       HomepageScraper.scrape_homepage
-      # self.display_categories
+      self.display_categories
    end
 
 
@@ -15,7 +15,7 @@ class CLI
          input = gets.strip.downcase
        end
        
-      if input == "start"
+      if input == "start" #Category class will need to be utilized here
          puts <<-DOC
             1. Points
             2. Rebounds
@@ -27,6 +27,8 @@ class CLI
 
          puts "\nPlease select a category you would like to view.\n"
       end
+
+
    end
 
 
