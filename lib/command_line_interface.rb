@@ -15,8 +15,12 @@ class CLI
    # user enters start
 
    def start
-      input = gets.strip
-
+      input = nil
+      while input != "exit" and input != "start" do
+         print "Please enter start to continue\n"
+         input = gets.strip.downcase
+       end
+       
       if input == "start"
          puts <<-DOC
             1. Points
@@ -26,10 +30,11 @@ class CLI
             5. Steals
             6. Minutes
          DOC
-      else 
-         puts "I'm sorry, please enter 'start'."
       end
    end
+
+   # "start"
+           
 
    # def display_categories
    #    #Category.all.sort -> returns list of major statistical categories in the 2019 NBA season (category names will be in a hash)
