@@ -1,3 +1,5 @@
+require_relative '../lib/homepage_scraper.rb'
+
 class CLI
    def run
       self.greeting
@@ -7,7 +9,7 @@ class CLI
    end
 
    def greeting
-      puts "Hello, basketball head! Welcome to Stat-Padder!"
+      puts "Hello, basketball head! Welcome to Stat-Padder!  For a list of categories, enter 'start'"
    end
 
    def categories
