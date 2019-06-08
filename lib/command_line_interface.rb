@@ -3,7 +3,9 @@ require_relative '../lib/homepage_scraper.rb'
 class CLI
    def run
       # self.start
-      HomepageScraper.scrape_homepage
+      # HomepageScraper.scrape_homepage
+      HomepageScraper.scrape_categories
+      HomepageScraper.scrape_player_names
       # self.display_categories
    end
 

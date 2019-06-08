@@ -9,9 +9,9 @@ class Category
    def initialize
       @name = 
       @@all << self
-      self
+      @players = []
    end
 
-
+   
 
 end
