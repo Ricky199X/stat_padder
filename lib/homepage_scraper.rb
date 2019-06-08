@@ -40,7 +40,7 @@ class HomepageScraper
          player_array << link.css("a").text.strip
       end
       return player_array
-      binding.pry
+      # binding.pry
    end
 
    def self.scrape_player_urls
@@ -48,7 +48,7 @@ class HomepageScraper
       parsed_HTML = Nokogiri::HTML(page)
       player_urls = []
       parsed_HTML.css("span.player-name").each do |url|
-         player_urls << url.css("a").attribute("href").value
+         player_urls << "https://basketball.realgm.com" + url.css("a").attribute("href").value
       end
       return player_urls
       # binding.pry
