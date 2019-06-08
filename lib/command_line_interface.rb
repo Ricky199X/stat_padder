@@ -4,9 +4,9 @@ class CLI
    def run
       # self.start
       # HomepageScraper.scrape_homepage
-      HomepageScraper.scrape_categories
-      HomepageScraper.scrape_player_names
-      HomepageScraper.scrape_player_urls
+      HomepageScraper.scrape_all
+      # HomepageScraper.scrape_player_names
+      # HomepageScraper.scrape_player_urls
       # self.display_categories
    end
 
