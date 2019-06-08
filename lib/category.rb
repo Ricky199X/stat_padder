@@ -6,5 +6,12 @@ class Category
 
    # binding.pry
 
+   def initialize
+      @name = 
+      @@all << self
+      self
+   end
+
+
 
 end
