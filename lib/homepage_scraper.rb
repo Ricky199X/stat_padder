@@ -48,7 +48,20 @@ class HomepageScraper
       }
     end
     categories
-    binding.pry
+   #  binding.pry
+  end
+
+  def self.scrape_bio(profile_url)
+      #scrapes individual student profiles to 
+      # get more information 
+  
+      site_html = profile_url
+      page = open(site_html)
+      profile = Nokogiri::HTML(page)
+  
+      bio_hash = {}
+
+      
   end
 
 end
