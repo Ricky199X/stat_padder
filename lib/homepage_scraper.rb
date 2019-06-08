@@ -1,25 +1,6 @@
 class HomepageScraper
 
    BASE_URL = "https://basketball.realgm.com/nba/stats"
-   
-
-   # def self.scrape_homepage
-   #    page = open(BASE_URL) # page is now returning content 
-   #    parsed_players = Nokogiri::HTML(page)
-
-   #    category_array = parsed_players.css("div.category-name").map(&:text)
-      
-
-   #    player_names = parsed_players.css("span.player-name").collect do |link|
-   #       link.css("a").text.strip
-   #    end
-
-   #    # player_links = parsed_players.css("span.player-name").collect do |link|
-   #    #    link.css("a").attribute('href').value
-   #    # end
-   #    # binding.pry
-
-   # end
 
    def self.scrape_categories
       page = open(BASE_URL)
@@ -53,5 +34,10 @@ class HomepageScraper
       return player_urls
       # binding.pry
    end
+
+   # time for second level scrape
+
+   
 end
+
 
