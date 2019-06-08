@@ -4,7 +4,7 @@ class Category
 
    @@all = []
 
-   binding.pry
+   # binding.pry
 
 
 end
