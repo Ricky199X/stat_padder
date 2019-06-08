@@ -52,7 +52,7 @@ class HomepageScraper
   end
 
   def self.scrape_bio(profile_url)
-      #scrapes individual student profiles to 
+      #scrapes individual player profiles to 
       # get more information 
   
       site_html = profile_url
@@ -61,7 +61,8 @@ class HomepageScraper
   
       bio_hash = {}
 
-      
+      profile.css().each do |href|
+
   end
 
 end
