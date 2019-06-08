@@ -7,7 +7,7 @@ class Category
    # binding.pry
 
    def initialize
-      @name = 
+      @name = name
       @@all << self
    
    end

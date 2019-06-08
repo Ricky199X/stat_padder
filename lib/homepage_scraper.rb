@@ -35,7 +35,6 @@ class HomepageScraper
    #    binding.pry
    # end
 
-   # time for second level scrape
 
    def self.scrape_all
    page = open(BASE_URL)
@@ -44,7 +43,8 @@ class HomepageScraper
       {
         category_name: category.css("div.category-name").text,
         players: category.css("span.player-name a").map(&:text),
-        player_links: "https://basketball.realgm.com" + category.css("span.player-name a").attribute("href").value
+        player_links: category.css("span.player-name").map {|url| "https://basketball.realgm.com" + url.css("a").attribute("href").value}  
+      #   "https://basketball.realgm.com" + category.css("a").attr("href").value
       }
     end
     categories
