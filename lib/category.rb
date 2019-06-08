@@ -1,6 +1,6 @@
 class Category
    # each category has a name
-   attr_accessor :name
+   attr_accessor :name, :player
 
    @@all = []
 
@@ -9,9 +9,9 @@ class Category
    def initialize
       @name = 
       @@all << self
-      @players = []
+   
    end
 
-   
+
 
 end

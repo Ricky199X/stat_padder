@@ -44,8 +44,7 @@ class HomepageScraper
       {
         category_name: category.css("div.category-name").text,
         players: category.css("span.player-name a").map(&:text),
-      #   player_links: category.css("span.player-name a").attr("href").value
-      #   player_url: "https://basketball.realgm.com" + data.css("span.player-name a").attribute("href").value
+        player_links: "https://basketball.realgm.com" + category.css("span.player-name a").attribute("href").value
       }
     end
     categories
