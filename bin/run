@@ -3,5 +3,5 @@
 require_relative '../lib/environment.rb'
 
 
-app = StatPadder::CLI.new
+app = CLI.new
 app.run

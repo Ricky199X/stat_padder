@@ -1,4 +1,4 @@
-class StatPadder::HomepageScraper
+class HomepageScraper
 
    BASE_URL = "https://basketball.realgm.com/nba/stats"
 
@@ -6,7 +6,7 @@ class StatPadder::HomepageScraper
     page = open(BASE_URL)
     parsed_HTML = Nokogiri::HTML(page)
     parsed_HTML.css("div.overall-leader").each do |cat|
-      category = StatPadder::Category.new
+      category = Category.new
         category.name = cat.css("div.category-name").text
         category.players = cat.css("span.player-name a").map(&:text)
         category.player_links = cat.css("span.player-name").map {|url| "https://basketball.realgm.com" + url.css("a").attribute("href").value}   

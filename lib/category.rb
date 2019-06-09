@@ -1,22 +1,23 @@
-class StatPadder::Category
+class Category
    # each category has a name, players, and urls
    attr_accessor :name, :players, :player_links
 
    @@all = []
 
+   # def initialize(name, players, player_links)
+   #    @name = name
+   #    @players = players
+   #    @player_links = player_links
+   # end
+
    def save
       @@all << self
    end
 
-   # def list_all
-   # # objective: return a bunch of instance of categories 
-   #    # self.all.each do |category|
-      
-   # end
 
    def self.all
       @@all
-      binding.pry
+      # binding.pry
    end
 
 end

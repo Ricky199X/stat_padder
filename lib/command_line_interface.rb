@@ -1,11 +1,11 @@
 # require_relative '../lib/homepage_scraper.rb'
 
-class StatPadder::CLI
+class CLI
    def run
-      StatPadder::HomepageScraper.scrape_categories
+      HomepageScraper.scrape_categories
       start
       menu
-      StatPadder::Category.all
+      # StatPadder::Category.all
       # player_menu
    end
 
@@ -17,25 +17,19 @@ class StatPadder::CLI
          input = gets.strip.downcase
 
          if input == "start"
-            puts <<-DOC
-            \n
-            1. Points
-            2. Rebounds
-            3. Assists
-            4. Blocks
-            5. Steals
-            6. Minutes
-         DOC
+           list_categories
          else
             puts "Hello, basketball head! For a list of categories, enter 'start'.\n"
          end
       end
    end
 
-   # def list_categories
-   #    # at this point, we begin building out our Category class
-   #    @categories = Category.list_all
-   # end
+   def list_categories
+      # Category.all -> returns list of major statistical categories in the 2019 NBA season
+      Category.all.each_with_index do |category, i|
+         puts "   \n#{i + 1}. #{category.name}  "
+      end
+   end
 
    def menu
       puts "\nEnter the number or the name of the category for more information or exit to leave."
@@ -152,13 +146,6 @@ class StatPadder::CLI
    end
 
 
-
-   # def display_categories
-   #    #Category.all -> returns list of major statistical categories in the 2019 NBA season
-   #    # Category.all.each_with_index do |category, i|
-   #    #    puts "#{i + 1} #{category.title}"
-   
-   # end
 
    # accepts user input here to determine which category's players they'd like to see
 
