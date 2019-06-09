@@ -2,7 +2,13 @@ class Category
    # each category has a name, players, and urls
    attr_accessor :category_name, :players
 
-   def self.categories
+   @@all = []
+
+   def self.scrape_categories
+      categories = []
+
+      categories << self.scrape_realGM
+
       #should return a list of categories
       # Points
       # Rebounds
@@ -37,11 +43,13 @@ class Category
       # category_6.players = ["Bradley Beal", "Paul George", "James Harden", "Russell Westbrook", "Jrue Holiday"]
 
       # @@all = [category_1, category_2, category_3, category_4, category_5, category_6]
-
-
-
+     
    end
 
+   def self.scrape_realGM
+      page = open(https://basketball.realgm.com/nba/stats)
+      parsed_HTML = Nokogiri::HTML(page)
+   end
 
 
    # 1. Accepts an array of hashes
