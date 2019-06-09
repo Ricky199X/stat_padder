@@ -10,7 +10,6 @@ class Category
 
    @@all = []
 
-
    def save
       @@all << self
    end
