@@ -4,7 +4,7 @@ class CLI
    def run
       self.start
       HomepageScraper.scrape_all
-      Category.display_categories
+      # Category.display_categories
    end
 
 

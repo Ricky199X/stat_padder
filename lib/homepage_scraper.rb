@@ -39,7 +39,7 @@ class HomepageScraper
    def self.scrape_all
    page = open(BASE_URL)
    parsed_HTML = Nokogiri::HTML(page)
-   categories = parsed_HTML.css("div.overall-leader").map do |category|
+   categories_array = parsed_HTML.css("div.overall-leader").map do |category|
       {
         category_name: category.css("div.category-name").text,
         players: category.css("span.player-name a").map(&:text),
@@ -47,8 +47,8 @@ class HomepageScraper
       #   "https://basketball.realgm.com" + category.css("a").attr("href").value
       }
     end
-    categories
-    binding.pry
+    categories_array
+    # binding.pry
   end
 
 #   def self.scrape_bio(profile_url)
