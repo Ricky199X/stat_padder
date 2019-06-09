@@ -13,18 +13,20 @@ class CLI
       input = nil
       while input != "exit" and input != "start" do
          input = gets.strip.downcase
-      end
-       
-      if input == "start"
-         puts <<-DOC
-         \n
-         1. Points
-         2. Rebounds
-         3. Assists
-         4. Blocks
-         5. Steals
-         6. Minutes
-      DOC
+
+         if input == "start"
+            puts <<-DOC
+            \n
+            1. Points
+            2. Rebounds
+            3. Assists
+            4. Blocks
+            5. Steals
+            6. Minutes
+         DOC
+         else
+            puts "Hello, basketball head! For a list of categories, enter 'start'.\n"
+         end
       end
    end
 
@@ -33,10 +35,9 @@ class CLI
 
       next_input = nil
       while next_input != "exit" do
-
          next_input = gets.strip.downcase
-         case next_input
-            when "1"
+
+            if next_input == "1"
                   puts <<-DOC
                1. James Harden
                2. Paul George
@@ -44,7 +45,7 @@ class CLI
                4. Joel embiid
                5. Lebron James
             DOC
-            when "2"
+            elsif next_input == "2"
                puts <<-DOC
                1. Andre Drummond
                2. Joel embiid
@@ -52,7 +53,7 @@ class CLI
                4. Rudy Gobert
                5. Clint Capela
             DOC
-            when "3"
+            elsif next_input == "3"
                puts <<-DOC
                1. Russell westbrook
                2. john wall
@@ -60,7 +61,7 @@ class CLI
                4. lebron james
                5. jeff teague
             DOC
-            when "4"
+            elsif next_input == "4"
                puts <<-DOC
                1. myles turner
                2. mitchell robinson
@@ -68,7 +69,7 @@ class CLI
                4. rudy gobert
                5. brook lopez
             DOC
-            when "5"
+            elsif next_input == "5"
                puts <<-DOC
                1. paul george
                2. robert covington
@@ -76,7 +77,7 @@ class CLI
                4. chris paul
                5. russell westbrook
             DOC
-            when "6" 
+            elsif next_input == "6" 
                puts <<-DOC
                1. bradley beal
                2. paul george
@@ -84,8 +85,10 @@ class CLI
                4. russell westbrook
                5. jrue holiday
             DOC
-            when "exit"
+            elsif next_input == "exit"
                goodbye
+            else
+            puts "\nEnter the number of the category for more information or exit to leave."
          end
       end
 
