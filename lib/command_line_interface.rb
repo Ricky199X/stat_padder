@@ -1,10 +1,11 @@
-require_relative '../lib/homepage_scraper.rb'
+# require_relative '../lib/homepage_scraper.rb'
 
-class CLI
+class StatPadder::CLI
    def run
-      HomepageScraper.scrape_categories
+      StatPadder::HomepageScraper.scrape_categories
       start
       menu
+      # list_categories
       # player_menu
    end
 
@@ -31,10 +32,10 @@ class CLI
       end
    end
 
-   def list_categories
-      # at this point, we begin building out our Category class
-      @categories = Category.list_all
-   end
+   # def list_categories
+   #    # at this point, we begin building out our Category class
+   #    @categories = Category.list_all
+   # end
 
    def menu
       puts "\nEnter the number or the name of the category for more information or exit to leave."
