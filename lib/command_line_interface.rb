@@ -45,6 +45,9 @@ class CLI
                4. Joel embiid
                5. Lebron James
             DOC
+
+            puts "\nFor more information on a player in the Points category, enter their name\n"
+
             elsif next_input == "2" || next_input == "rebounds"
                puts <<-DOC
                1. Andre Drummond
@@ -53,6 +56,10 @@ class CLI
                4. Rudy Gobert
                5. Clint Capela
             DOC
+
+            puts "\nFor more information on a player in the Rebunds category, enter their name\n"
+
+
             elsif next_input == "3" || next_input == "assists"
                puts <<-DOC
                1. Russell westbrook
@@ -61,6 +68,9 @@ class CLI
                4. lebron james
                5. jeff teague
             DOC
+
+            puts "\nFor more information on a player in the Assists category, enter their name\n"
+
             elsif next_input == "4" || next_input == "blocks"
                puts <<-DOC
                1. myles turner
@@ -69,6 +79,10 @@ class CLI
                4. rudy gobert
                5. brook lopez
             DOC
+
+            puts "\nFor more information on a player in the Blocks category, enter their name\n"
+
+
             elsif next_input == "5" || next_input == "steals"
                puts <<-DOC
                1. paul george
@@ -77,6 +91,10 @@ class CLI
                4. chris paul
                5. russell westbrook
             DOC
+
+            puts "\nFor more information on a player in the Steals category, enter their name\n"
+
+
             elsif next_input == "6" || next_input == "minutes"
                puts <<-DOC
                1. bradley beal
@@ -85,6 +103,9 @@ class CLI
                4. russell westbrook
                5. jrue holiday
             DOC
+
+            puts "\nFor more information on a player in the Minutes category, enter their name\n"
+
             elsif next_input == "exit"
                goodbye
             elsif next_input == "back"
