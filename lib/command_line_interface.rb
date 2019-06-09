@@ -46,7 +46,7 @@ class CLI
                5. Lebron James
             DOC
 
-            puts "\nFor more information on a player in the Points category, enter their name\n"
+            puts "\nFor info on a player in this category, enter the player's name or enter 'back' to go back to the main menu\n"
 
             elsif next_input == "2" || next_input == "rebounds"
                puts <<-DOC
@@ -57,7 +57,7 @@ class CLI
                5. Clint Capela
             DOC
 
-            puts "\nFor more information on a player in the Rebunds category, enter their name\n"
+            puts "\nFor info on a player in this category, enter the player's name or enter 'back' to go back to the main menu\n"
 
 
             elsif next_input == "3" || next_input == "assists"
@@ -69,7 +69,7 @@ class CLI
                5. jeff teague
             DOC
 
-            puts "\nFor more information on a player in the Assists category, enter their name\n"
+            puts "\nFor info on a player in this category, enter the player's name or enter 'back' to go back to the main menu\n"
 
             elsif next_input == "4" || next_input == "blocks"
                puts <<-DOC
@@ -80,7 +80,7 @@ class CLI
                5. brook lopez
             DOC
 
-            puts "\nFor more information on a player in the Blocks category, enter their name\n"
+            puts "\nFor info on a player in this category, enter the player's name or enter 'back' to go back to the main menu\n"
 
 
             elsif next_input == "5" || next_input == "steals"
@@ -92,7 +92,7 @@ class CLI
                5. russell westbrook
             DOC
 
-            puts "\nFor more information on a player in the Steals category, enter their name\n"
+            puts "\nFor info on a player in this category, enter the player's name or enter 'back' to go back to the main menu\n"
 
 
             elsif next_input == "6" || next_input == "minutes"
@@ -104,10 +104,11 @@ class CLI
                5. jrue holiday
             DOC
 
-            puts "\nFor more information on a player in the Minutes category, enter their name\n"
+            puts "\nFor info on a player in this category, enter the player's name or enter 'back' to go back to the main menu\n"
 
             elsif next_input == "exit"
                goodbye
+
             elsif next_input == "back"
                puts <<-DOC
                \n
@@ -118,8 +119,20 @@ class CLI
                5. Steals
                6. Minutes
             DOC
+            puts "\nSelect a category:"
+
             else
+               puts <<-DOC
+               \n
+               1. Points
+               2. Rebounds
+               3. Assists
+               4. Blocks
+               5. Steals
+               6. Minutes
+            DOC
             puts "\nEnter the number of the category for more information or exit to leave."
+            
          end
       end
 
