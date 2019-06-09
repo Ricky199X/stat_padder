@@ -3,8 +3,8 @@ require_relative '../lib/homepage_scraper.rb'
 class CLI
    def run
       self.start
-      HomepageScraper.scrape_all
-      # Category.display_categories
+      HomepageScraper.scrape_categories
+      Category.all
    end
 
 
@@ -16,7 +16,7 @@ class CLI
        end
        
       if input == "start"
-         # Category.display_categories
+         Category.all
          puts "\nPlease select a category you would like to view.\n"
       end
 
