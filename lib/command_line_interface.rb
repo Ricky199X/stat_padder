@@ -31,6 +31,11 @@ class CLI
       end
    end
 
+   def list_categories
+      # at this point, we begin building out our Category class
+      @categories = Category.list_all
+   end
+
    def menu
       puts "\nEnter the number or the name of the category for more information or exit to leave."
       next_input = nil
