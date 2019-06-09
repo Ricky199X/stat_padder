@@ -15,16 +15,8 @@ class CLI
          input = gets.strip.downcase
        end
        
-      if input == "start" #Category class will need to be utilized here
-         puts <<-DOC
-            1. Points
-            2. Rebounds
-            3. Assists
-            4. Blocks
-            5. Steals
-            6. Minutes
-         DOC
-
+      if input == "start"
+         Category.display_categories
          puts "\nPlease select a category you would like to view.\n"
       end
 

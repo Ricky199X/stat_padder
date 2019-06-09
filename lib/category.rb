@@ -1,6 +1,6 @@
 class Category
    # each category has a name
-   attr_accessor :name
+   attr_accessor :catgory_name, :players, :player_links
 
    @@all = []
 

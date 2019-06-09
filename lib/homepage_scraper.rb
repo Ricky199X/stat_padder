@@ -48,7 +48,7 @@ class HomepageScraper
       }
     end
     categories
-    # binding.pry
+    binding.pry
   end
 
 #   def self.scrape_bio(profile_url)
