@@ -4,11 +4,10 @@ class Category
 
    @@all = []
 
-   # binding.pry
-
    def initialize
       @@all << self
       self
+      binding.pry
    end
 
    # [{:category_name=>"Points",
@@ -22,7 +21,7 @@ class Category
 
    def self.create_from_collection(category_array)
       category_array.each do |category|
-            self.new(category)
+         self.new(category)
       end
    end
 
@@ -30,8 +29,11 @@ class Category
    #    categories.each do ||
    # end
 
-   # def self.display_categories
-   # end
+   def self.display_categories
+      @@all.each do |category|
+         puts category
+      end
+   end
 
    def self.all
       @@all
