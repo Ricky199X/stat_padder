@@ -4,12 +4,6 @@ class Category
 
    @@all = []
 
-   # def initialize(name, players, player_links)
-   #    @name = name
-   #    @players = players
-   #    @player_links = player_links
-   # end
-
    def save
       @@all << self
    end
