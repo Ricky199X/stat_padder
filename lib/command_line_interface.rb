@@ -5,7 +5,7 @@ class StatPadder::CLI
       StatPadder::HomepageScraper.scrape_categories
       start
       menu
-      # list_categories
+      StatPadder::Category.all
       # player_menu
    end
 

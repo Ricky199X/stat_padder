@@ -16,7 +16,7 @@ class StatPadder::Category
 
    def self.all
       @@all
-      # binding.pry
+      binding.pry
    end
 
 end
