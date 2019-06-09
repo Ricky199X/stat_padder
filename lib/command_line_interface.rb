@@ -3,7 +3,7 @@ require_relative '../lib/homepage_scraper.rb'
 class CLI
    def run
       self.start
-      # HomepageScraper.scrape_all
+      HomepageScraper.scrape_all
       # Category.display_categories
    end
 
