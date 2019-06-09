@@ -3,10 +3,10 @@ require_relative '../lib/homepage_scraper.rb'
 class CLI
    def run
       self.start
-      scrape_categories
-      display_categories
-      list_categories
-      menu
+      HomepageScraper.scrape_categories
+      Category.display_categories
+      # list_categories
+      # menu
    end
 
 
@@ -18,17 +18,17 @@ class CLI
        end
        
       if input == "start"
-         Category.all
+         Category.display_categories
          puts "\nPlease select a category you would like to view.\n"
       end
    end
 
 
-           
-
    def display_categories
-      #Category.all.sort -> returns list of major statistical categories in the 2019 NBA season (category names will be in a hash)
-     
+      #Category.all -> returns list of major statistical categories in the 2019 NBA season
+      Category.all.each_with_index do |category, i|
+         puts "#{i + 1} #{category.title}"
+      end
    end
 
    # accepts user input here to determine which category's players they'd like to see
