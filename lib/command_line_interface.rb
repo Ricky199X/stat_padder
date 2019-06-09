@@ -2,17 +2,16 @@ require_relative '../lib/homepage_scraper.rb'
 
 class CLI
    def run
-      start
       HomepageScraper.scrape_categories
+      start
       menu
-      goodbye
    end
 
 
    def start
+      puts "Hello, basketball head! For a list of categories, enter 'start'.\n"
       input = nil
       while input != "exit" and input != "start" do
-         puts "Hello, basketball head! For a list of categories, enter 'start'. To leave, say 'exit'\n"
          input = gets.strip.downcase
       end
        
@@ -30,12 +29,14 @@ class CLI
    end
 
    def menu
-      input = nil
-      while input != "exit" do
-         puts "\n\nEnter the number of the category for more information or exit to leave."
-         input = gets.strip.downcase.to_i
-         case input
-            when 1
+      puts "\nEnter the number of the category for more information or exit to leave."
+
+      next_input = nil
+      while next_input != "exit" do
+
+         next_input = gets.strip.downcase
+         case next_input
+            when "1"
                   puts <<-DOC
                1. James Harden
                2. Paul George
@@ -43,7 +44,7 @@ class CLI
                4. Joel embiid
                5. Lebron James
             DOC
-            when 2
+            when "2"
                puts <<-DOC
                1. Andre Drummond
                2. Joel embiid
@@ -51,7 +52,7 @@ class CLI
                4. Rudy Gobert
                5. Clint Capela
             DOC
-            when 3
+            when "3"
                puts <<-DOC
                1. Russell westbrook
                2. john wall
@@ -59,7 +60,7 @@ class CLI
                4. lebron james
                5. jeff teague
             DOC
-            when 4
+            when "4"
                puts <<-DOC
                1. myles turner
                2. mitchell robinson
@@ -67,7 +68,7 @@ class CLI
                4. rudy gobert
                5. brook lopez
             DOC
-            when 5
+            when "5"
                puts <<-DOC
                1. paul george
                2. robert covington
@@ -75,7 +76,7 @@ class CLI
                4. chris paul
                5. russell westbrook
             DOC
-            when 6 
+            when "6" 
                puts <<-DOC
                1. bradley beal
                2. paul george
@@ -92,7 +93,7 @@ class CLI
 
 
    def goodbye
-      puts "Remember, basketball head. Ball is life."
+      puts "\nRemember, basketball head: ball is life."
    end
 
 
