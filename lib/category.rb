@@ -21,17 +21,17 @@ class Category
    #      "https://basketball.realgm.com/player/LeBron-James/Summary/250"]}]...
 
    def self.create_from_collection(category_array)
-      category_array.each do |category_hash|
-         category_hash.each do |key, value|
-            if key == :category_name
-            self.new(key)
-            end
-         end
+      category_array.each do |category|
+            self.new(category)
       end
    end
 
-   def self.display_categories
-   end
+   # def add_categories(categories)
+   #    categories.each do ||
+   # end
+
+   # def self.display_categories
+   # end
 
    def self.all
       @@all
