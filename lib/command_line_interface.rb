@@ -4,9 +4,7 @@ class CLI
    def run
       self.start
       HomepageScraper.scrape_categories
-      Category.display_categories
-      # list_categories
-      # menu
+      self.menu
    end
 
 
@@ -18,18 +16,29 @@ class CLI
        end
        
       if input == "start"
-         Category.display_categories
-         puts "\nPlease select a category you would like to view.\n"
+         puts <<-DOC
+         \n
+         1. Points
+         2. Rebounds
+         3. Assists
+         4. Blocks
+         5. Steals
+         6. Minutes
+      DOC
       end
    end
 
 
-   def display_categories
-      #Category.all -> returns list of major statistical categories in the 2019 NBA season
-      Category.all.each_with_index do |category, i|
-         puts "#{i + 1} #{category.title}"
-      end
+   def menu
+      puts "\n\nEnter the number of the category or the catagory name for more information."
    end
+
+   # def display_categories
+   #    #Category.all -> returns list of major statistical categories in the 2019 NBA season
+   #    # Category.all.each_with_index do |category, i|
+   #    #    puts "#{i + 1} #{category.title}"
+   
+   # end
 
    # accepts user input here to determine which category's players they'd like to see
 

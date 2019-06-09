@@ -14,23 +14,23 @@ class HomepageScraper
     end
   end
 
-#   def self.scrape_bio(profile_url)
-#       #scrapes individual player profiles to 
-#       # get more information 
+  # def self.scrape_bio(profile_url)
+  #     #scrapes individual player profiles to 
+  #     # get more information 
   
-#       site_html = profile_url
-#       page = open(site_html)
-#       profile = Nokogiri::HTML(page)
+  #     site_html = profile_url
+  #     page = open(site_html)
+  #     profile = Nokogiri::HTML(page)
   
-#       bio_hash = {}
+  #     bio_hash = {}
 
-#       profile.css("div.profile-box").each do |href|
+  #     profile.css("div.profile-box").each do |href|
 
-#          # {
+  #        # {
 
-#          #}
+  #        #}
 
-#   end
+  # end
 
 end
 
