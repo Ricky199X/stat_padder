@@ -4,6 +4,9 @@ class Category
 
    @@all = []
 
+   # BUG REPORT. If a player appears in more than one category, Categories are not Instatiating Properly.
+
+   # Data is returning this way:
    # Category.new = [{:name=>"Points",
    #    :players=>["James Harden", "Paul George", "Giannis Antetokounmpo", "Joel Embiid", "LeBron James"],
    #    :player_links=>
@@ -18,17 +21,25 @@ class Category
       @players = players
       @player_links = player_links
       @@all << self
-      self
    end
 
-   def self.create_from_collection(categories)
-      categories.each do |element|
-         category = Category.new(element)
-      end
-   end
+   # def self.create_from_collection(categories)
+   #    categories.each do |element|
+   #       category = Category.new(element)
+   #    end
+   # end
 
+   # def save
+   #    @@all << self
+   # end
+  
    def self.all
       @@all
+   end
+  
+    
+   def self.reset_all
+      self.all.clear
    end
 end
 

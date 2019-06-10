@@ -26,10 +26,8 @@ class HomepageScraper
   #     category.players = cat.css("span.player-name a").map(&:text)
   #     category.player_links = cat.css("span.player-name").map {|url| "https://basketball.realgm.com" + url.css("a").attribute("href").value}   
   #     category.save
-
+  #     category
   #   end
-
-  #    binding.pry	
   # end	
   
 end

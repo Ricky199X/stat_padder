@@ -3,10 +3,14 @@
 class CLI
    def run
       HomepageScraper.scrape_categories
-      start
-      menu
-      # StatPadder::Category.all
-      # player_menu
+      start # user hits start, calls Category.list_all, receives the menu of categories back
+      menu # User has a menu + a prompt to enter number or category name # calls on Players.find_by_category
+            # to return a list of players in that category 
+
+      # players # User has a list of players in a specific category, is prompted to select a player based 
+               # on number or player name
+      # more_info # User enters a player name, is returned biological info on that player
+      # goodbye # Returns a goodbye message and closes the program 
    end
 
 
@@ -49,14 +53,14 @@ class CLI
          next_input = gets.strip.downcase
 
          if next_input == "1" || next_input == "points"
-            # list_players_in_category(next_input)
-               puts <<-DOC
-            1. James Harden
-            2. Paul George
-            3. Giannis Antetokounmpo
-            4. Joel embiid
-            5. Lebron James
-         DOC
+            list_categories
+         #       puts <<-DOC
+         #    1. James Harden
+         #    2. Paul George
+         #    3. Giannis Antetokounmpo
+         #    4. Joel embiid
+         #    5. Lebron James
+         # DOC
 
             puts "\nFor info on a player in this category, enter the player's name or enter 'back' to go back to the main menu\n"
 
@@ -148,20 +152,13 @@ class CLI
       end
    end
 
-   # def player_menu
+   def player_menu
 
-   # end
+   end
 
    def goodbye
       puts "\nRemember, basketball head: ball is life."
    end
 
 
-
-   # accepts user input here to determine which category's players they'd like to see
-
-#   def display_players_and_totals
-#       # Player.all.sort
-#      # code here -> ultimately returns the names of the players in that category + their total in that category
-#   end
 end
