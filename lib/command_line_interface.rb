@@ -31,6 +31,17 @@ class CLI
       end
    end
 
+   # def list_players_in_category(input)
+   #    # needs to list players based on category entered -> similar logic to list_categories
+   #    if input == Category.all.name
+   #    Category.all.each do |category|
+   #       category.players.each_with_index do |players, i|
+   #          puts "#{i + 1}. #{players}"
+   #       end
+   #    end
+   # end
+
+
    def menu
       puts "\nEnter the number or the name of the category for more information or exit to leave."
       next_input = nil
@@ -38,6 +49,7 @@ class CLI
          next_input = gets.strip.downcase
 
          if next_input == "1" || next_input == "points"
+            # list_players_in_category(next_input)
                puts <<-DOC
             1. James Harden
             2. Paul George
@@ -58,7 +70,6 @@ class CLI
          DOC
 
             puts "\nFor info on a player in this category, enter the player's name or enter 'back' to go back to the main menu\n"
-
 
          elsif next_input == "3" || next_input == "assists"
             puts <<-DOC
