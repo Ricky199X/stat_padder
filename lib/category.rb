@@ -17,17 +17,14 @@ class Category
       @name = name
       @players = players
       @player_links = player_links
+      @@all << self
+      self
    end
 
    def self.create_from_collection(categories)
       categories.each do |element|
-        category = self.new(element)
-        category.save
+         category = Category.new(element)
       end
-   end
-
-   def save
-      @@all << self
    end
 
    def self.all
