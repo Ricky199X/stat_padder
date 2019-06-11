@@ -13,7 +13,7 @@ class HomepageScraper
       player_links: category.css("span.player-name").map {|url| "https://basketball.realgm.com" + url.css("a").attribute("href").value}
       })
     end
-    return categories
+    categories
     # binding.pry
   end
   
