@@ -4,35 +4,13 @@ class Category
 
    @@all = []
 
-   # BUG REPORT. If a player appears in more than one category, Categories are not Instatiating Properly.
-
-   # Data is returning this way:
-   # Category.new = [{:name=>"Points",
-   #    :players=>["James Harden", "Paul George", "Giannis Antetokounmpo", "Joel Embiid", "LeBron James"],
-   #    :player_links=>
-   #     ["https://basketball.realgm.com/player/James-Harden/Summary/1598",
-   #      "https://basketball.realgm.com/player/Paul-George/Summary/2305",
-   #      "https://basketball.realgm.com/player/Giannis-Antetokounmpo/Summary/49629",
-   #      "https://basketball.realgm.com/player/Joel-Embiid/Summary/49880",
-   #      "https://basketball.realgm.com/player/LeBron-James/Summary/250"]}]
-
-   def initialize(name:, players:, player_links:)
+   def initialize(name:, description:)
       @name = name
       @players = players
-      @player_links = player_links
+      @description = description
       @@all << self
    end
 
-   # def self.create_from_collection(categories)
-   #    categories.each do |element|
-   #       category = Category.new(element)
-   #    end
-   # end
-
-   # def save
-   #    @@all << self
-   # end
-  
    def self.all
       @@all
    end
