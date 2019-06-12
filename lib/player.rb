@@ -1,11 +1,9 @@
 class Player
-   attr_accessor :name, :url
+   attr_reader :name, :url
 
    @@all = []
 
-   
-
-   def initialize(name:, url:)
+   def initialize(name, url)
       @name = name
       @url = url
       @@all << self
@@ -14,6 +12,7 @@ class Player
    # def self.save
    #    @@all << self
    # end
+
   
    def self.all
       @@all

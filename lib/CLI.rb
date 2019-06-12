@@ -1,7 +1,7 @@
-require_relative '../lib/homepage_scraper.rb'
 
 class CLI
    def run
+      self.welcome
       HomepageScraper.scrape_players
    end
 #       welcome # user hits start, calls Category.list_all, receives the menu of categories back
@@ -15,47 +15,80 @@ class CLI
 #    end
 
 
-#    def welcome
-#       puts "Hello, basketball head! For a list of categories, enter 'start'.\n"
-#       input = nil
-#       while input != "exit" and input != "start" do
-#          input = gets.strip.downcase
+   def welcome
+      puts "Hello, basketball head! For a list of categories, enter 'start'.\n"
+      input = nil
+      while input != "exit" and input != "start" do
+         input = gets.strip.downcase
 
-#          if input == "start"
-#          #   list_categories
-#          puts <<-DOC
-#          \n
-#          1. Points
-#          2. Rebounds
-#          3. Assists
-#          4. Blocks
-#          5. Steals
-#          6. Minutes
-#          DOC
+         if input == "start"
+            list_players
+      
+         puts "\nPick a player you'd like to learn more about:"
 
-#          else
-#             puts "Hello, basketball head! For a list of categories, enter 'start'.\n"
-#          end
-#       end
-#    end
+         else
+            puts "Hello, basketball head! For a list of categories, enter 'start'.\n"
+         end
+      end
+   end
 
-#    # def list_categories
-#    #    # Category.all -> returns list of major statistical categories in the 2019 NBA season
-#    #    Category.all.each_with_index do |category, i|
-#    #       puts "   \n#{i + 1}. #{category.name}  "
-#    #    end
-#    # end
-
-#    # def list_players_in_category(input)
-#    #    # needs to list players based on category entered -> similar logic to list_categories
-#    #    if input == Category.all.name
-#    #    Category.all.each do |category|
-#    #       category.players.each_with_index do |players, i|
-#    #          puts "#{i + 1}. #{players}"
-#    #       end
-#    #    end
-#    # end
-
+   def list_players
+      # Category.all -> returns list of 50 Greatest NBA Players
+      # Player.all.each_with_index do |player, i|
+      #    puts "   \n#{i + 1}. #{player.name}  "
+      # end
+      puts <<-DOC
+               "Kareem Abdul-Jabbar",
+               "Nate Archibald",
+               "Paul Arizin",
+               "Charles Barkley",
+               "Rick Barry",
+               "Elgin Baylor",
+               "Dave Bing",
+               "Larry Bird",
+               "Wilt Chamberlain",
+               "Bob Cousy",
+               "Dave Cowens",
+               "Billy Cunningham",
+               "Dave DeBusschere",
+               "Clyde Drexler",
+               "Julius Erving",
+               "Patrick Ewing",
+               "Walt Frazier",
+               "George Gervin",
+               "Hal Greer",
+               "John Havlicek",
+               "Elvin Hayes",
+               "Magic Johnson",
+               "Sam Jones",
+               "Michael Jordan",
+               "Jerry Lucas",
+               "Karl Malone",
+               "Moses Malone",
+               "Pete Maravich",
+               "Kevin McHale",
+               "George Mikan",
+               "Earl Monroe",
+               "Hakeem Olajuwon",
+               "Robert Parish",
+               "Bob Pettit",
+               "Scottie Pippen",
+               "Willis Reed",
+               "Oscar Robertson",
+               "David Robinson",
+               "Bill Russell",
+               "Dolph Schayes",
+               "Bill Sharman",
+               "John Stockton",
+               "Isiah Thomas",
+               "Nate Thurmond",
+               "Wes Unseld",
+               "Bill Walton",
+               "Jerry West",
+               "Lenny Wilkens",
+               "James Worthy"
+            DOC
+   end
 
 #    def menu
 #       puts "\nEnter the number or the name of the category for more information or exit to leave."
