@@ -7,21 +7,27 @@ class HomepageScraper
     page = open(BASE_URL)
     parsed_HTML = Nokogiri::HTML(page)
     name_lis = parsed_HTML.css("div.field-item li")
-    # binding.pry
-
-    # name = name_lis.css("strong a").map(&:text)
-    # url = parsed_HTML.css("ul li strong a").collect {|url| url.attribute("href").value}
-    # binding.pry
-    name_lis.each do |li|
-      name = li.css("strong a").text.strip 
+    name_lis.to_a.compact.each do |li|
+      name = li.css("strong a").text.strip
       # binding.pry
-      url = li.at("a")[:href] rescue nil
+      url = li.li.at("a")[:href] rescue nil
       Player.new(name,url)
     end
     # binding.pry
+
+    def self.scrape_bio(player)
+      url = player.url
+      html = Nokogiri::HTML(open(url))
+      bio = html.css("div.field-item p")
+    end
   end
 
-  #   players = []
+ 
+  
+end
+
+
+ #   players = []
 
   #   parsed_HTML.css("div").collect do |player|
   #     players.push({
@@ -38,7 +44,8 @@ class HomepageScraper
   # def self.scrape_description(player_link)
   # end
 
-  
-end
+ # binding.pry
 
-
+    # name = name_lis.css("strong a").map(&:text)
+    # url = parsed_HTML.css("ul li strong a").collect {|url| url.attribute("href").value}
+    # binding.pry

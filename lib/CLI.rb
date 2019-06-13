@@ -41,6 +41,18 @@ class CLI
       end
    end
 
+   def choose_player
+      index = gets.strip.to_i - 1
+      player = Player.all[index]
+      HomepageScraper.scrape_bio(player)
+      self.display_player_info(player)
+   end
+
+   def display_player_info(player)
+      puts "\n\n\n"
+      puts player.name
+      puts player.bio
+   end
 #    def menu
 #       puts "\nEnter the number or the name of the category for more information or exit to leave."
 #       category_input = nil
