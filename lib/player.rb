@@ -1,13 +1,12 @@
 class Player
    attr_reader :name, :url
-   attr_accessor :bio
+   attr_accessor :description
 
    @@all = []
 
    def initialize(name, url)
       @name = name
       @url = url
-      @bio = bio
       @@all << self
    end
 

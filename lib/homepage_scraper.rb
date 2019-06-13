@@ -12,6 +12,7 @@ class HomepageScraper
       # binding.pry
       url = li.at("a")[:href] rescue nil
       Player.new(name,url)
+      # binding.pry
     end
     # binding.pry
 
@@ -19,10 +20,8 @@ class HomepageScraper
       url = player.url
       html = Nokogiri::HTML(open(url))
       des = html.css("p.article__detail--inline-caption").text.strip
-      # binding.pry
-      # bio = html.css("div.paragraph-text p")
-
-      # "div.paragraph_text"
+      bio = html.css("div.paragraphs p").text
+      binding.pry
     end
   end
 
