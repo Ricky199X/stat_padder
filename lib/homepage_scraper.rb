@@ -18,13 +18,28 @@ class HomepageScraper
     def self.scrape_bio(player)
       url = player.url
       html = Nokogiri::HTML(open(url))
-      bio = html.css("div.field-item p")
+      des = html.css("p.article__detail--inline-caption").text.strip
+      # binding.pry
+      # bio = html.css("div.paragraph-text p")
+
+      # "div.paragraph_text"
     end
   end
 
  
   
 end
+
+
+
+
+
+
+
+
+
+
+
 
 
  #   players = []
