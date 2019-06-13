@@ -1,8 +1,16 @@
 
 class CLI
    def run
-      self.welcome
       HomepageScraper.scrape_players
+      loop do 
+         user_input = welcome
+         if user_input == "exit"
+            return 
+         else
+            self.list_players
+            self.choose_player
+         end
+      end
    end
 #       welcome # user hits start, calls Category.list_all, receives the menu of categories back
 #       menu # User has a menu + a prompt to enter number or category name # calls on Players.find_by_category
@@ -16,78 +24,21 @@ class CLI
 
 
    def welcome
-      puts "Hello, basketball head! For a list of categories, enter 'start'.\n"
-      input = nil
-      while input != "exit" and input != "start" do
-         input = gets.strip.downcase
-
-         if input == "start"
-            list_players
-      
-         puts "\nPick a player you'd like to learn more about:"
-
-         else
-            puts "Hello, basketball head! For a list of categories, enter 'start'.\n"
-         end
-      end
+      puts "\nHello, basketball head! To get started, enter 'start'.\n"
+      user_input = gets.strip.downcase
+      return user_input
    end
 
+   # def menu
+   #    puts "These are the 50 players who defined the game of basketball as we know it"
+   # end
+
    def list_players
+      puts "\n Pick a player you would like to learn more about:"
       # Category.all -> returns list of 50 Greatest NBA Players
-      # Player.all.each_with_index do |player, i|
-      #    puts "   \n#{i + 1}. #{player.name}  "
-      # end
-      puts <<-DOC
-               "Kareem Abdul-Jabbar",
-               "Nate Archibald",
-               "Paul Arizin",
-               "Charles Barkley",
-               "Rick Barry",
-               "Elgin Baylor",
-               "Dave Bing",
-               "Larry Bird",
-               "Wilt Chamberlain",
-               "Bob Cousy",
-               "Dave Cowens",
-               "Billy Cunningham",
-               "Dave DeBusschere",
-               "Clyde Drexler",
-               "Julius Erving",
-               "Patrick Ewing",
-               "Walt Frazier",
-               "George Gervin",
-               "Hal Greer",
-               "John Havlicek",
-               "Elvin Hayes",
-               "Magic Johnson",
-               "Sam Jones",
-               "Michael Jordan",
-               "Jerry Lucas",
-               "Karl Malone",
-               "Moses Malone",
-               "Pete Maravich",
-               "Kevin McHale",
-               "George Mikan",
-               "Earl Monroe",
-               "Hakeem Olajuwon",
-               "Robert Parish",
-               "Bob Pettit",
-               "Scottie Pippen",
-               "Willis Reed",
-               "Oscar Robertson",
-               "David Robinson",
-               "Bill Russell",
-               "Dolph Schayes",
-               "Bill Sharman",
-               "John Stockton",
-               "Isiah Thomas",
-               "Nate Thurmond",
-               "Wes Unseld",
-               "Bill Walton",
-               "Jerry West",
-               "Lenny Wilkens",
-               "James Worthy"
-            DOC
+      Player.all.each_with_index do |player, i|
+         puts "   \n#{i + 1}. #{player.name} \n "
+      end
    end
 
 #    def menu

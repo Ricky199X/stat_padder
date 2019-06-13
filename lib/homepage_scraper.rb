@@ -12,8 +12,8 @@ class HomepageScraper
     # name = name_lis.css("strong a").map(&:text)
     # url = parsed_HTML.css("ul li strong a").collect {|url| url.attribute("href").value}
     # binding.pry
-    name_lis.to_a.compact.each do |li|
-      name = li.css("strong a").text.strip rescue ""
+    name_lis.each do |li|
+      name = li.css("strong a").text.strip 
       # binding.pry
       url = li.at("a")[:href] rescue nil
       Player.new(name,url)
