@@ -52,7 +52,11 @@ class CLI
    def display_player_info(player)
       puts "\n\n\n"
       puts player.name
+      puts "\n\n\n"
+      puts player.des
+      puts "\n\n\n"
       puts player.bio
+      puts "\n\n\n"
    end
 #    def menu
 #       puts "\nEnter the number or the name of the category for more information or exit to leave."
