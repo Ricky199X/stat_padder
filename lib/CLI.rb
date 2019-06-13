@@ -5,7 +5,8 @@ class CLI
       loop do 
          user_input = welcome
          if user_input == "exit"
-            return 
+            puts "\n\nRemember, basketball head, ball is life.\n\n"
+            return
          else
             self.list_players
             self.choose_player

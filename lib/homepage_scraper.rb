@@ -10,7 +10,7 @@ class HomepageScraper
     name_lis.to_a.compact.each do |li|
       name = li.css("strong a").text.strip
       # binding.pry
-      url = li.li.at("a")[:href] rescue nil
+      url = li.at("a")[:href] rescue nil
       Player.new(name,url)
     end
     # binding.pry
