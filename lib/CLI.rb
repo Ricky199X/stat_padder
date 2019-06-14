@@ -26,10 +26,7 @@ class CLI
 
    def list_players
       puts "\nPick a player you would like to learn more about:"
-      # Category.all -> returns list of 50 Greatest NBA Players
-      Player.all.each_with_index do |player, i|
-         puts " \n#{i + 1}. #{player.name} \n "
-      end
+      Player.list_players
    end
 
    def choose_player
@@ -43,11 +40,6 @@ class CLI
       self.display_player_bio(player)
    end
 
-   # def more_information
-      
-   #    input = gets.strip
-   #    self.display_player_bio
-   # end
 
    def display_player_info(player)
       puts "\n\n"
@@ -61,6 +53,7 @@ class CLI
    def display_player_bio(player)
       puts player.bio
       puts "\n\n\n"
+      puts "To go back to the main menu"
    end
 
 

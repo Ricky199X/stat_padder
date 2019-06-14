@@ -22,4 +22,13 @@ class Player
       self.all.clear
    end
 
+   def self.list_players
+      self.all.each_with_index do |player, i|
+         puts " \n#{i + 1}. #{player.name} \n "
+      end
+   end
+
+   def 
+   end
+
 end
