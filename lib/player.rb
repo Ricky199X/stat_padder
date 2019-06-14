@@ -27,8 +27,4 @@ class Player
          puts " \n#{i + 1}. #{player.name} \n "
       end
    end
-
-   def 
-   end
-
 end

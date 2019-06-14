@@ -21,42 +21,6 @@ class HomepageScraper
       player.bio = html.css("div.paragraphs p").map(&:text)
     end
   end
-
- 
   
 end
 
-
-
-
-
-
-
-
-
-
-
-
-
- #   players = []
-
-  #   parsed_HTML.css("div").collect do |player|
-  #     players.push({
-  #       name: player.css("ul li strong a").text,
-  #       url: player.css("ul li strong a href").value.strip
-  #     })
-  #   end
-  #   players
-  # end
-
-    #self.description will receive a player link -> will scrape the dscription on the players landing page and return that 
-      #description
-
-  # def self.scrape_description(player_link)
-  # end
-
- # binding.pry
-
-    # name = name_lis.css("strong a").map(&:text)
-    # url = parsed_HTML.css("ul li strong a").collect {|url| url.attribute("href").value}
-    # binding.pry

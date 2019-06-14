@@ -16,7 +16,7 @@ class CLI
 
    def welcome
       puts "\nHello, basketball head! To get started, enter 'start'.\n"
-      user_input = gets.strip.downcase
+         user_input = gets.strip.downcase
       return user_input
    end
 
@@ -35,9 +35,13 @@ class CLI
       HomepageScraper.scrape_bio(player)
       self.display_player_info(player)
       puts "For more information on this player, hit 'Y'"
-      input = gets.strip
-      puts "\n"
-      self.display_player_bio(player)
+      input = gets.strip.downcase
+         if input == "y"
+            puts "\n"
+            self.display_player_bio(player)
+         else
+            "I'm sorry, please enter a valid input."
+         end
    end
 
 
@@ -53,8 +57,17 @@ class CLI
    def display_player_bio(player)
       puts player.bio
       puts "\n\n\n"
-      puts "To go back to the main menu"
+      puts "To go back to the main menu, enter 'back' "
+      self.back
    end
 
+   def back
+      input = gets.strip.downcase
+         if input == "back"
+         self.list_players
+         else
+         puts "I'm sorry, I don't understand that command."
+      end
+   end
 
 end
