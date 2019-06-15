@@ -4,4 +4,4 @@ require_relative '../lib/environment.rb'
 
 
 app = CLI.new.run
-app.run
+# app.run

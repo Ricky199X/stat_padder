@@ -7,11 +7,12 @@ class HomepageScraper
     page = open(BASE_URL)
     parsed_HTML = Nokogiri::HTML(page)
     name_lis = parsed_HTML.css("div.field-item li")
-    name_lis.to_a.compact.each do |li|
+    name_lis.each do |li|
       name = li.css("strong a").text.strip
       url = li.at("a")[:href] rescue nil
       Player.new(name,url)
-    end
+      # binding.pry
+  end
 
     def self.scrape_bio(player)
       url = player.url
@@ -19,6 +20,7 @@ class HomepageScraper
       player.des = html.css("p.article__detail--inline-caption").text.strip
       # need to make the bio more readable instead of in a large chunk of text
       player.bio = html.css("div.paragraphs p").map(&:text)
+      # binding.pry
     end
   end
   
