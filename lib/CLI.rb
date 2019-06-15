@@ -84,14 +84,7 @@ class CLI
    end
 
    # refactored list players 
-   def print_restaurants(from_number)
-      puts " "
-      puts "---------- Player #{from_number} - #{from_number+9} ----------"
-      puts ""
-      Player.all[from_number-1, 10].each.with_index(from_number) do |restaurant, index|
-        puts "#{index}. #{restaurant.name} - #{restaurant.location}"
-      end
-   end
+ 
 
    def back
       input = gets.strip.downcase
