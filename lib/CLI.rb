@@ -6,97 +6,79 @@ class CLI
    def run
    # Scrapes the data, loads everything up 
    HomepageScraper.scrape_players
-   # it runs the program - has several methods in it, that all execute in succession
-   welcome #-> welcome the user, accepts an input to get to the next level of the menu
-      #if input == "start" -> self.list_players
-      #else -> puts "I'm sorry, I thought you wanted to learn something today!"
-
-   self.choose_player # -> accepts an index,  
-      # -> sets local variable of player, then uses the index to pick the player's position in the Player.all array 
-      # scrapes the player's bio, loads it up
-      # calls self.display_player_info(player)
+   puts "\nHello, basketball head! Welcome!\n"
+   welcome
    end
+
 
    def welcome
-      puts " "
-      puts "\nHello, basketball head! To get started, enter 'start'.\n"
-      user_input = gets.strip.downcase
-
-      if user_input == "start"
+      user_input = nil 
+   
+      until user_input == "exit"
          puts "\nThese are the 50 players who defined the game of basketball as we know it. Pick a legend to learn more.\n"
-
-         # menu_input = gets.strip.downcase
-         Player.list_players
-      elsif user_input == "exit"
-         puts "\n\nRemember, basketball head, ball is life.\n\n"
-         return 
-      else
-         puts "I'm sorry, I thought you wanted to learn something today!"
-         welcome
-      end
-   end
-
-
-   def choose_player
-      index = gets.strip.to_i - 1
-      player = Player.all[index]
-
-      HomepageScraper.scrape_bio(player)
-      self.display_player_info(player)
-
-      puts "For more information on this player, hit 'Y'. To exit, hit 'N'. "
-
-      input = gets.strip.downcase
-
-      if input == "y"
-         self.display_player_bio(player)
-      elsif input == "n"
          puts ""
-         puts "\n\nRemember, basketball head, ball is life.\n\n"
-         exit 
-      else
-         puts " "
-         puts "You seem confused, bruh, let me send you back to the main menu!"
-         puts "\n<<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>>\n"
-         welcome
-      end
+         list_players
+         puts "\nSelect a player by number:"
+         user_input = gets.strip.downcase
+
+         case 
+            when user_input.to_i > 0 #need to also account for it being less than 50 (Kareem not returning)
+            puts ""
+               choose_player(user_input)
+               display_player_info(user_input)
+
+            when user_input == "y"
+               puts "\n<<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>>\n"
+               display_player_bio(user_input)
+               puts "Do you want to look at another player?"
+               choose_player
+               
+            when user_input == "exit"
+               puts "\n\nRemember, basketball head, ball is life.\n\n"
+            else 
+               puts "You seem confused, bruh, how's a fresh start sound?"
+         end
+      end   
    end
 
+   # ------  Helpers  --------
 
-      # ------  Helpers  --------
+      def choose_player(index)
+         player = Player.all[index.to_i - 1]
+         display_player_info(player)
+         # binding.pry
+      end
+   
+      def list_players
+         Player.all.each_with_index do |player, i|
+            puts "#{i + 1}. #{player.name}"
+         end
+      end
 
-   def display_player_info(player)
+
+   def display_player_info(input)
+      # url = input.url
+      HomepageScraper.scrape_bio(input)
       puts " "
       puts "\n<<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>>\n"
       puts " "
-      puts "You picked #{player.name}."
+      puts "You picked #{input.name}."
       puts "\n\n"
-      puts player.des
-      puts "\n\n"
-      return
-   end
+      puts input.des
 
-   def display_player_bio(player)
-      puts player.bio
+      # binding.pry
+      puts " "
+      puts "\n<<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>>\n"
+      puts " "
+      puts input.bio
       puts "\n\n\n"
-      puts "To go back to the main menu, enter 'back' "
-      self.back
-   end
-
-   # refactored list players 
- 
-
-   def back
-      input = gets.strip.downcase
-         if input == "back"
-         puts "\n<<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>>\n"
-         puts "\nThese are the 50 players who defined the game of basketball as we know it. Pick a legend to learn more.\n"
-         Player.list_players
-         self.choose_player
-         else
-         puts "I'm sorry, I don't understand that command."
-         welcome
-      end
+      # binding.pry
+      puts "\n\n"
    end
    
+   
 end
+
+   
+
+

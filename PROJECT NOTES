@@ -15,27 +15,34 @@ Basic for pushing to Github - push OFTEN.
 8. Program
 
 Separation of Concerns
-1. Scraper Class - Scrapes the raw data from Real GM
-2. Player Class - Creates Instances of each player (accounts for if players appear in multiple categories)
-3. Bio Class - Provides the biological player information
-3. Stat Generator Class - (Each player's stat totals for the year)
+1. Scraper Class - Scrapes the raw data from NBA.com
+2. Player Class - Creates Instances of each player (name, url, description, bio)
+3. CLI - Controller
 
 2 Levels Deep
-- First Level: List of statistical categories
-- Second Level: The individual player page + summary of stat totals 
+- First Level: List of 50 greatest NBA Players
+- Second Level: The individual player page + summary of career
 
 
 Basic Interface:
 
----- "Welcome to Stat-Padder! Enter "Start" to begin" ---- 
-   * user enters "start" or "START" (need to account for capitalized letters in string)
+def run
+   HomepageScraper.scrape_players - Scrapes the data, loads everything up 
+   
+   welcome #-> welcome the user, accepts an input to get to the next level of the menu
+      #if input == "start" -> self.list_players
+      #else -> puts "I'm sorry, I thought you wanted to learn something today!"
 
----- "To view the leaders + 2019 totals, enter a number or category name." ----
-   * user enter the number of the category (need to account of capitalized letters in string)
+   # choose_player # -> accepts an index,  
+      # -> sets local variable of player, then uses the index to pick the player's position in the Player.all array 
+      # scrapes the player's bio, loads it up
+      # calls self.display_player_info(player)
 
-   * user will be presented the top 5 leaders of that stat category + basic total in that category *
 
----- "To learn more about a player, enter a number or the player's name. If you would like to go back to main menu, enter "Menu" ---- 
+until user_input = exit
 
-   * user is presented with player's basic bio + facts about player *
+   case 
+   case
+
+
 

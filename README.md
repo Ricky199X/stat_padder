@@ -1,6 +1,6 @@
 # StatPadder
 
-Welcome to Stat-Padder! This is your one-stop shop for all things NBA basketball! The 2018-2019 NBA season was a special one, with a number of player ascending, dominating, and evolving the game. This gem is meant to commemorate and document the players that made such a special season happen!
+Welcome to Stat-Padder! This is your one-stop shop for all things NBA basketball history! The NBA has been fortunate enough to have thousands of legendary players grace its ranks. This gem is meant to commemorate the top 50 players of all time that have impacted and evolved the game.
 
 ## Installation
 
@@ -20,7 +20,7 @@ Or install it yourself as:
 
 ## Usage
 
-Welcome to Stat-Padder Gem! This is your one-stop shop for all things NBA basketball! The 2018-2019 NBA season was a special one, with a number of player ascending, dominating, and evolving the game. This gem is meant to commemorate and document the players that made such a special season happen!
+
 
 
 
