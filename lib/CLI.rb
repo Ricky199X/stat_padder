@@ -7,7 +7,7 @@ class CLI
    # Scrapes the data, loads everything up 
    HomepageScraper.scrape_players
    # it runs the program - has several methods in it, that all execute in succession
-   self.welcome #-> welcome the user, accepts an input to get to the next level of the menu
+   welcome #-> welcome the user, accepts an input to get to the next level of the menu
       #if input == "start" -> self.list_players
       #else -> puts "I'm sorry, I thought you wanted to learn something today!"
 
@@ -15,8 +15,6 @@ class CLI
       # -> sets local variable of player, then uses the index to pick the player's position in the Player.all array 
       # scrapes the player's bio, loads it up
       # calls self.display_player_info(player)
-
-   self.back
    end
 
    def welcome
@@ -31,8 +29,10 @@ class CLI
          Player.list_players
       elsif user_input == "exit"
          puts "\n\nRemember, basketball head, ball is life.\n\n"
+         return 
       else
          puts "I'm sorry, I thought you wanted to learn something today!"
+         welcome
       end
    end
 
@@ -95,6 +95,7 @@ class CLI
          self.choose_player
          else
          puts "I'm sorry, I don't understand that command."
+         welcome
       end
    end
    
