@@ -6,7 +6,7 @@ class CLI
    def run
    # Scrapes the data, loads everything up 
    HomepageScraper.scrape_players
-   puts "\nHello, basketball head! Welcome!\n"
+   puts  "\nTo see the 50 players who defined the game of basketball as we know it. Enter 'list'\n"
    welcome
    end
 
@@ -15,7 +15,6 @@ class CLI
       user_input = nil 
    
       until user_input == "exit"
-         puts "\nThese are the 50 players who defined the game of basketball as we know it. Pick a legend to learn more.\n"
          puts ""
          user_input = gets.strip.downcase
 
@@ -23,17 +22,15 @@ class CLI
             when user_input == "list"
                Player.list_players
             puts "\nSelect a player by number:"
-            
+
             when user_input.to_i > 0 #need to also account for it being less than 50 (Kareem not returning)
             puts ""
                choose_player(user_input)
-            puts "Do you want to look at another player?"
+        
+            puts "To look at another player, enter a number from 1 - 50."
 
-            when user_input == "y"
-               puts "\n<<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>>\n"
-               display_player_bio(user_input)
-               puts "Do you want to look at another player?"
-               choose_player
+            when user_input.to_i > 0
+               choose_player(user_input)
                
             when user_input == "exit"
                puts "\n\nRemember, basketball head, ball is life.\n\n"
