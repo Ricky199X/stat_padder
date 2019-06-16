@@ -23,7 +23,5 @@ class Player
       end
    end
 
-   def self.find_by_index(index)
-      @@all[index]
-   end
+
 end

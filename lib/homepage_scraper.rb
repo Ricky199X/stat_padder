@@ -1,6 +1,6 @@
 class HomepageScraper
 
-   BASE_URL = "https://www.nba.com/history/nba-at-50/top-50-players"
+  BASE_URL = "https://www.nba.com/history/nba-at-50/top-50-players"
   #  PROFILE_URL = BASE_URL + 
 
   def self.scrape_players
@@ -14,18 +14,18 @@ class HomepageScraper
       # binding.pry
   end
 
-    def self.scrape_bio(player_object)
-      url = player_object.url
-      html = Nokogiri::HTML(open(url))
-      player_object.des = html.css("p.article__detail--inline-caption").text.strip
-      player_object.bio = html.css("div.paragraphs p").map{|paragraph| paragraph.content}
+  def self.scrape_bio(player_object)
+    url = player_object.url
+    html = Nokogiri::HTML(open(url))
+    player_object.des = html.css("p.article__detail--inline-caption").text.strip
+    player_object.bio = html.css("div.paragraphs p").map{|paragraph| paragraph.content}
       # puts "#{html.css("div.paragraphs p")[0].text}\n\n"
       # puts "#{html.css("div.paragraphs p")[1].text}\n\n"
       # puts "#{html.css("div.paragraphs p")[2].text}\n\n"
       # puts "#{html.css("div.paragraphs p")[3].text}\n\n"
       # binding.pry
-      end
     end
+  end
 
   #   def display_bio
   #     variable = html.css("div.paragraphs p")

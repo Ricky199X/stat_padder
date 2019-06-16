@@ -1,7 +1,3 @@
-# refactor CLI
-
-# chain of command:
-
 class CLI
    def run
    # Scrapes the data, loads everything up 
@@ -42,27 +38,27 @@ class CLI
 
    # ------  Helpers  --------
 
-      def choose_player(index)
+   def choose_player(index)
          # binding.pry
-         player = Player.all[index.to_i - 1]
+      player = Player.all[index.to_i - 1]
          # display_player_info(player)
 
-         HomepageScraper.scrape_bio(player)
-         puts " "
-         puts "\n<<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>>\n"
-         puts " "
-         puts "You picked #{player.name}."
-         puts "\n\n"
-         puts player.des
-         puts " "
-         puts "\n<<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>>\n"
-         puts " "
-         puts player.bio
-         puts "\n\n\n"
+      HomepageScraper.scrape_bio(player)
+      puts " "
+      puts "\n<<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>>\n"
+      puts " "
+      puts "You picked #{player.name}."
+      puts "\n\n"
+      puts player.des
+      puts " "
+      puts "\n<<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>>\n"
+      puts " "
+      puts player.bio
+      puts "\n\n\n"
          # binding.pry
-         puts "\n\n"
+      puts "\n\n"
          
-      end
+   end
       
      
    
@@ -73,10 +69,9 @@ class CLI
       Player.all[from_input-1, 10].each.with_index(from_input) do |player, index|
         puts "#{index}. #{player.name}"
       end  
-    end 
+   end 
    
 end
 
    
 
-#
