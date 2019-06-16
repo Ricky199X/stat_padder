@@ -1,7 +1,6 @@
 class HomepageScraper
 
   BASE_URL = "https://www.nba.com/history/nba-at-50/top-50-players"
-  #  PROFILE_URL = BASE_URL + 
 
   def self.scrape_players
     page = open(BASE_URL)
@@ -11,7 +10,7 @@ class HomepageScraper
       name = li.css("strong a").text.strip
       url = li.at("a")[:href] rescue nil
       Player.new(name,url)
-      # binding.pry
+
   end
 
   def self.scrape_bio(player_object)
@@ -27,13 +26,7 @@ class HomepageScraper
     end
   end
 
-  #   def display_bio
-  #     variable = html.css("div.paragraphs p")
-  #     variable.each_with_index do |paragraph, i| 
-  #        puts variable[i]
-  #     end
-  #  end
-  
+   
 end
 
 

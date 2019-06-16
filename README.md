@@ -2,6 +2,9 @@
 
 Welcome to Stat-Padder! This is your one-stop shop for all things NBA basketball history! The NBA has been fortunate enough to have thousands of legendary players grace its ranks. This gem is meant to commemorate the top 50 players of all time that have impacted and evolved the game.
 
+## Getting Started
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+
 ## Installation
 
 Add this line to your application's Gemfile:

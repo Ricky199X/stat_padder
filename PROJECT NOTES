@@ -43,7 +43,7 @@ def run
 Finishing Touches
 - The event loop - DONE
 - Need to incorporate Shaq 
-- Paginate the players 
+- Paginate the players - DONE
 - require gem that formats the return outputs  [https://github.com/ruby-formatter/rufo]
 
 
@@ -57,3 +57,64 @@ Finishing Touches
         puts "#{index}. #{player.name}"
       end  
    end 
+
+
+    # def self.scrape_players
+    #   page = open(BASE_URL)
+    #   parsed_HTML = Nokogiri::HTML(page)
+    #   name_lis = parsed_HTML.css("div.field-item li")
+    #   # try using select to get values != nil ->>> use .nil?
+    #   name_lis.select do |li|
+    #     name = li.css("strong a").text.strip
+    #     url = li.css("a").attribute("href").value.strip if li.css("a").attribute("href").value != nil               #css("a").attr("href").value if li.css("a").attr("href").value.nil? == false #rescue nil
+    #       # if data scraped contains a value == nil, don't instantiate player
+    #       # if url.nil? != false 
+    #       # else instantiate player
+
+    #       # [element = true, element = nil].select {|el| el.nil? != false}
+
+    #     Player.new(name,url)
+        # binding.pry
+
+
+  #    HomepageScraper.scrape_bio(player)
+   #    self.display_player_info(player)
+
+   #    # while input != "exit"
+   #    puts "For more information on this player, hit 'Y'. To exit, enter 'N' or 'Exit'. "
+
+   #    input = gets.strip.downcase
+
+   #    if input == "y"
+   #       puts "\n<<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>>\n"
+   #       self.display_player_bio(player)
+      
+   #    elsif user_input == "back"
+
+   #       welcome
+
+   #    elsif input == "n" || input == "exit"
+   #       puts "\n<<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>>\n"
+   #       puts "\n\nRemember, basketball head, ball is life.\n\n"
+   #       return 
+
+   #    else
+   #       puts " "
+   #       puts "You seem confused, bruh, how's a fresh start sound?"
+   #    end
+   # end
+
+
+      # puts " "
+      # user_input = gets.strip.downcase
+
+      # if "
+
+      #    choose_player
+
+      
+   # end
+
+
+
+    #each{|element| puts "#{html.css("div.paragraphs p")[0].text}\n\n"} # need to make the bio more readable instead of in a large chunk of text
