@@ -42,7 +42,7 @@ def run
 
 Finishing Touches
 - The event loop - DONE
-- Need to incorporate Shaq 
+- Need to incorporate Shaq - DONE
 - Paginate the players - DONE
 - require gem that formats the return outputs  [https://github.com/ruby-formatter/rufo]
 

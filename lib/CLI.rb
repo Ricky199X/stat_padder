@@ -23,7 +23,7 @@ class CLI
 
          case 
             when user_input == "start"
-               puts "\nSelect a page of players you would like to view (1-10, 11-20, 21-30, 31-40,41-50)"
+               puts "\nSelect a number in the range of players you would like to view [1-10, 11-20, 21-30, 31-40,41-50]"
                
                input = gets.strip.to_i
                print_players(input)
@@ -32,8 +32,10 @@ class CLI
 
             when user_input.to_i > 0
                if user_input == nil
+                  puts "\n\nRemember, basketball head, ball is life.\n\n"
                   return
                else
+                  
                choose_player(user_input)
                
                puts "\n<<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>>\n"
@@ -53,8 +55,11 @@ class CLI
                end
 
             when user_input.to_i > 0
+               if user_input == nil
+                  start
+               else
                choose_player(user_input)
-               
+               end
             when user_input == "exit"
                puts "\n\nRemember, basketball head, ball is life.\n\n"
             else 
@@ -78,7 +83,7 @@ class CLI
       puts "Would you like to learn more about #{player.name}? Enter 'Y' for more info or 'back' to see the menu."
       puts "\n<<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>>\n"
          input = gets.strip.downcase
-            if input == "y"
+            if input == "y" || input == "yes"
                puts " "
                puts player.bio
             elsif input == "back"
@@ -93,7 +98,7 @@ class CLI
 
    def print_players(from_input)
       puts ""
-      puts "---------- NBA Legends #{from_input} - #{from_input+9} ----------"
+      puts "<<<<>>>><<<<>>>><<<<>>>> NBA Legends #{from_input} - #{from_input+9} <<<<>>>><<<<>>>><<<<>>>>"
       puts ""
       Player.all[from_input-1, 10].each.with_index(from_input) do |player, index|
          if index == 33

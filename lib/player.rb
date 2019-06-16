@@ -14,6 +14,7 @@ class Player
   
    def self.all
       @@all
+      # binding.pry
    end
 
 
@@ -23,8 +24,10 @@ class Player
       end
    end
 
-   def self.all_names
-      @@all.collect {|player| player.name}
+   def self.all_players
+      @@all.collect {|instance| instance}
+      # instances
+      # binding.pry
    end
 
 end
