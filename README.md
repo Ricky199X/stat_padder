@@ -1,4 +1,4 @@
-# StatPadder
+# Stat-Padder
 
 Welcome to Stat-Padder! This is your one-stop shop for all things NBA basketball history! The NBA has been fortunate enough to have thousands of legendary players grace its ranks. This gem is meant to commemorate the top 50 players of all time that have impacted and evolved the game.
 
