@@ -18,11 +18,6 @@ class HomepageScraper
     html = Nokogiri::HTML(open(url))
     player_object.des = html.css("p.article__detail--inline-caption").text.strip
     player_object.bio = html.css("div.paragraphs p").map{|paragraph| paragraph.content}
-      # puts "#{html.css("div.paragraphs p")[0].text}\n\n"
-      # puts "#{html.css("div.paragraphs p")[1].text}\n\n"
-      # puts "#{html.css("div.paragraphs p")[2].text}\n\n"
-      # puts "#{html.css("div.paragraphs p")[3].text}\n\n"
-      # binding.pry
     end
   end
 
