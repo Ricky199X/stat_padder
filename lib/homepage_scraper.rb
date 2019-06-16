@@ -14,12 +14,12 @@ class HomepageScraper
       # binding.pry
   end
 
-    def self.scrape_bio(player)
-      url = player.url
+    def self.scrape_bio(player_object)
+      url = player_object.url
       html = Nokogiri::HTML(open(url))
-      player.des = html.css("p.article__detail--inline-caption").text.strip
-      # need to make the bio more readable instead of in a large chunk of text
-      player.bio = html.css("div.paragraphs p").map {|paragraph| paragraph.content}
+      player_object.des = html.css("p.article__detail--inline-caption").text.strip
+      player_object.bio = html.css("div.paragraphs p").map {|paragraph| paragraph.content} # need to make the bio more readable instead of in a large chunk of text
+      # binding.pry
     end
   end
   

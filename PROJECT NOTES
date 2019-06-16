@@ -39,10 +39,11 @@ def run
       # calls self.display_player_info(player)
 
 
-until user_input = exit
 
-   case 
-   case
-
+Finishing Touches
+- The event loop
+- Need to incorporate Shaq
+- Paginate the players
+- require gem that formats the return outputs  [https://github.com/ruby-formatter/rufo]
 
 
