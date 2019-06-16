@@ -1,0 +1,42 @@
+
+   #    HomepageScraper.scrape_bio(player)
+   #    self.display_player_info(player)
+
+   #    # while input != "exit"
+   #    puts "For more information on this player, hit 'Y'. To exit, enter 'N' or 'Exit'. "
+
+   #    input = gets.strip.downcase
+
+   #    if input == "y"
+   #       puts "\n<<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>>\n"
+   #       self.display_player_bio(player)
+      
+   #    elsif user_input == "back"
+
+   #       welcome
+
+   #    elsif input == "n" || input == "exit"
+   #       puts "\n<<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>>\n"
+   #       puts "\n\nRemember, basketball head, ball is life.\n\n"
+   #       return 
+
+   #    else
+   #       puts " "
+   #       puts "You seem confused, bruh, how's a fresh start sound?"
+   #    end
+   # end
+
+
+      # puts " "
+      # user_input = gets.strip.downcase
+
+      # if "
+
+      #    choose_player
+
+      
+   # end
+
+
+
+    #each{|element| puts "#{html.css("div.paragraphs p")[0].text}\n\n"} # need to make the bio more readable instead of in a large chunk of text

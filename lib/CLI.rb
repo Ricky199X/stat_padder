@@ -63,26 +63,8 @@ class CLI
          puts "\n\n"
          
       end
-
-
-   # def display_player_info(player_obj) #this method is expecting an object for the input 
-      # url = input.url
-      # new_player = self.choose_player(player_obj)
-      # HomepageScraper.scrape_bio(player_obj)
-      # puts " "
-      # puts "\n<<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>>\n"
-      # puts " "
-      # puts "You picked #{player_obj.name}."
-      # puts "\n\n"
-      # puts player_obj.des
-      # puts " "
-      # puts "\n<<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>>\n"
-      # puts " "
-      # puts player_obj.bio
-      # puts "\n\n\n"
-      # # binding.pry
-      # puts "\n\n"
-   # end
+      
+     
    
    def print_players(from_input)
       puts ""

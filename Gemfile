@@ -6,3 +6,4 @@ gem 'pry'
 gemspec
 
 gem "nokogiri", "~> 1.10"
+gem 'formatador', '~> 0.2.5'

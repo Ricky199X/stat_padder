@@ -18,12 +18,28 @@ class HomepageScraper
       url = player_object.url
       html = Nokogiri::HTML(open(url))
       player_object.des = html.css("p.article__detail--inline-caption").text.strip
-      player_object.bio = html.css("div.paragraphs p").map {|paragraph| paragraph.content} # need to make the bio more readable instead of in a large chunk of text
+      player_object.bio = html.css("div.paragraphs p").map{|paragraph| paragraph.content}
+      # puts "#{html.css("div.paragraphs p")[0].text}\n\n"
+      # puts "#{html.css("div.paragraphs p")[1].text}\n\n"
+      # puts "#{html.css("div.paragraphs p")[2].text}\n\n"
+      # puts "#{html.css("div.paragraphs p")[3].text}\n\n"
       # binding.pry
+      end
     end
-  end
+
+  #   def display_bio
+  #     variable = html.css("div.paragraphs p")
+  #     variable.each_with_index do |paragraph, i| 
+  #        puts variable[i]
+  #     end
+  #  end
   
 end
+
+
+
+
+
 
 
 # def self.scrape_players
