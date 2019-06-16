@@ -2,6 +2,7 @@ PATH
   remote: .
   specs:
     stat_padder (0.1.0)
+      formatador (~> 0.2.5)
       nokogiri (~> 1.10)
 
 GEM

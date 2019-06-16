@@ -2,7 +2,15 @@ class CLI
    def run
    # Scrapes the data, loads everything up 
    HomepageScraper.scrape_players
-   puts  "\nTo see the 50 players who defined the game of basketball as we know it. Enter 'list'\n"
+   puts "\n"
+   puts " ------------------------------------------------------------ "
+   puts " ------------------------------------------------------------ "
+   puts " ------------------------------------------------------------ "
+   puts " ---------------------- Stat-Padder ------------------------- "
+   puts " ------------------------------------------------------------ "
+   puts " ------------------------------------------------------------ "
+   puts " ------------------------------------------------------------ "
+   puts  "\nGreetings, basketball head. To see the 50 players who defined the game of basketball as we know it. Enter 'list'\n"
    welcome
    end
 
@@ -16,6 +24,7 @@ class CLI
 
          case 
             when user_input == "list"
+            puts "\n"
                Player.list_players
             puts "\nSelect a player by number:"
 
@@ -31,7 +40,7 @@ class CLI
             when user_input == "exit"
                puts "\n\nRemember, basketball head, ball is life.\n\n"
             else 
-               puts "You seem confused, bruh, how's a fresh start sound?"
+               puts "You seem confused, bruh, how's a fresh start sound? Enter 'list'."
          end
       end   
    end
@@ -60,16 +69,6 @@ class CLI
          
    end
       
-     
-   
-   def print_players(from_input)
-      puts ""
-      puts "---------- NBA Legends #{from_input} - #{from_input+9} ----------"
-      puts ""
-      Player.all[from_input-1, 10].each.with_index(from_input) do |player, index|
-        puts "#{index}. #{player.name}"
-      end  
-   end 
    
 end
 

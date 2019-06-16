@@ -47,3 +47,13 @@ Finishing Touches
 - require gem that formats the return outputs  [https://github.com/ruby-formatter/rufo]
 
 
+   
+   
+   def print_players(from_input)
+      puts ""
+      puts "---------- NBA Legends #{from_input} - #{from_input+9} ----------"
+      puts ""
+      Player.all[from_input-1, 10].each.with_index(from_input) do |player, index|
+        puts "#{index}. #{player.name}"
+      end  
+   end 
