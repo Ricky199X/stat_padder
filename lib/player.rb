@@ -18,16 +18,14 @@ class Player
    end
 
 
-   def self.list_players
-      self.all.each_with_index do |player, i|
-         puts "#{i + 1}. #{player.name}"
-      end
-   end
+   # def self.list_players
+   #    self.all.each_with_index do |player, i|
+   #       puts "#{i + 1}. #{player.name}"
+   #    end
+   # end
 
-   def self.all_players
-      @@all.collect {|instance| instance}
-      # instances
-      # binding.pry
+   def self.find(index)
+      self.all[index - 1]
    end
 
 end

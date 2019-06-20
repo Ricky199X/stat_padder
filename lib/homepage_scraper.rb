@@ -17,7 +17,8 @@ class HomepageScraper
     url = player_object.url
     html = Nokogiri::HTML(open(url))
     player_object.des = html.css("p.article__detail--inline-caption").text.strip
-    player_object.bio = html.css("div.paragraphs p").collect{|paragraph| paragraph.text.split.join(" ")}
+    player_object.bio = html.css("div.paragraphs p").collect{|p| p.text}
+   
     end
   end
 

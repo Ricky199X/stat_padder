@@ -127,3 +127,9 @@ Finishing Touches
       # puts "#{html.css("div.paragraphs p")[2].text}\n\n"
       # puts "#{html.css("div.paragraphs p")[3].text}\n\n"
       # binding.pry
+
+
+      1. Run the Program
+      2. Accept input "start" to enter the main menu 
+         -> if you enter anything other than start, an error needs to come up, and re-prompt you 
+      3. 
