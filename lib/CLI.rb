@@ -14,49 +14,50 @@ class CLI
    end
 
    def welcome
-         puts " "
-         puts "<<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>>"
-         puts "\n"
+      puts " "
+      puts "<<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>>"
+      puts "\n"
 
          Player.list_players
 
-         puts "\nPick a player by number: "
+      puts "\nPick a player by number: "
          
-
          player_input = gets.strip.to_i
-
          player = Player.find(player_input)
          HomepageScraper.scrape_bio(player)
 
-         puts " "
-         puts "\n<<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>>\n"
-         puts " "
-         puts "You picked #{player.name}."
-         puts " "
-         puts player.des
-         puts " "
-         puts "Would you like to learn more about #{player.name}? Enter 'Y' for more info or 'exit' to leave."
-         puts "\n<<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>>\n"
-            input = gets.strip.downcase
-               if input == "y" || input == "yes"
-                  puts " "
-                  puts player.bio
-               else
-                  puts ""
-                  goodbye
-               end
-         puts "\n"
-         puts "\n" 
+      puts " "
+      puts "\n<<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>>\n"
+      puts " "
+      puts "You picked #{player.name}."
+      puts " "
+      puts player.des
+      puts " "
+      puts "Would you like to learn more about #{player.name}? Enter 'Y' for more info or 'exit' to leave."
+      puts "\n<<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>>\n"
+         input = gets.strip.downcase
+            if input == "y" || input == "yes"
+               puts " "
+               puts player.bio
+            else
+               puts ""
+               goodbye
+            end
+      puts "\n"
+      puts "\n" 
                
-         puts "Would you like to see more players?"
-            input = gets.strip.downcase
-               if input == "y" || input == "yes"
-                  welcome
+      puts "Would you like to see more players?"
+         input = gets.strip.downcase
+            if input == "y" || input == "yes"
+               welcome
+            elsif input == "n" || input == "no"
+               puts ""
+               goodbye
                else
-                  puts ""
-                  goodbye
-               end
-            
+               puts ""
+               puts "I don't understand that answer."
+               start
+            end
    end
 
    def goodbye
