@@ -8,17 +8,15 @@ class HomepageScraper
     name_lis = parsed_HTML.css("div.field-item li")
     name_lis.each do |li|
       name = li.css("strong a").text.strip
-      url = li.at("a")[:href] rescue nil
+      url = li.css("a").attribute("href") rescue nil
       Player.new(name,url)
-
   end
 
   def self.scrape_bio(player_object)
     url = player_object.url
     html = Nokogiri::HTML(open(url))
-    player_object.des = html.css("p.article__detail--inline-caption").text.strip
-    player_object.bio = html.css("div.paragraphs p").collect{|p| p.text}
-   
+      player_object.des = html.css("p.article__detail--inline-caption").text.strip
+      player_object.bio = html.css("div.paragraphs p").collect{|p| p.text}
     end
   end
 
