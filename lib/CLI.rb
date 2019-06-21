@@ -23,8 +23,16 @@ class CLI
       puts "\nPick a player by number: "
          
       player_input = gets.strip.to_i
-      player = Player.find(player_input)
-      HomepageScraper.scrape_bio(player)
+
+      while player_input < 1 || player_input > Player.length
+         puts "Please enter a valid input!"
+
+         player_input = gets.strip.to_i
+      end
+        
+         player = Player.find(player_input)
+         HomepageScraper.scrape_bio(player) if player.bio == nil 
+      
 
       puts " "
       puts "\n<<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>>\n"
