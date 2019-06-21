@@ -18,13 +18,13 @@ class CLI
       puts "<<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>>"
       puts "\n"
 
-         Player.list_players
+      Player.list_players
 
       puts "\nPick a player by number: "
          
-         player_input = gets.strip.to_i
-         player = Player.find(player_input)
-         HomepageScraper.scrape_bio(player)
+      player_input = gets.strip.to_i
+      player = Player.find(player_input)
+      HomepageScraper.scrape_bio(player)
 
       puts " "
       puts "\n<<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>><<<<>>>>\n"
@@ -42,27 +42,28 @@ class CLI
             else
                puts ""
                goodbye
+               return
             end
-      puts "\n"
-      puts "\n" 
+               puts "\n"
+               puts "\n" 
                
-      puts "Would you like to see more players?"
+               puts "Would you like to see more players?"
          input = gets.strip.downcase
             if input == "y" || input == "yes"
                welcome
             elsif input == "n" || input == "no"
                puts ""
                goodbye
-               else
+               return
+            else
                puts ""
                puts "I don't understand that answer."
-               start
+               welcome
             end
    end
 
    def goodbye
       puts "Remember, basketball head...ball is life."
-      return
    end
 
    
